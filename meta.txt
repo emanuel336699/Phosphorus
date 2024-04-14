@@ -1,0 +1,33 @@
+Task:
+[Create an AI AGENT WORKFLOW wich will be made using the Multi Agent Framework CREW.AI, this AI AGENT WORKFLOW will be consistent of Agents wich can create new agents and assign them with specific roles for completing the tasks they will be required to complete, The Agent system will be called Phosphor us, this whole thing needs to be able to run locally and for free, i shall implement Large Language Models wich are open source and use them for different agents, make sure you leave precise instructions for running it afterwars]
+
+Config:
+ChatEnvConfig.with_memory: False
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.git_management: False
+ChatEnvConfig.gui_design: True
+ChatEnvConfig.incremental_develop: False
+ChatEnvConfig.background_prompt: ChatDev is a software company powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief technology officer, etc, with a multi-agent organizational structure and the mission of 'changing the digital world through programming'.
+
+
+Roster:
+Chief Executive Officer, Counselor, Chief Human Resource Officer, Chief Product Officer, Chief Technology Officer, Programmer, Code Reviewer, Software Test Engineer, Chief Creative Officer
+
+Modality:
+application
+
+Ideas:
+
+
+Language:
+ Python
+
+Code_Version:
+4.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+
