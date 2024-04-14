@@ -1,78 +1,53 @@
-# Phosphorus Agent System User Manual
+# Phosphorus Interface User Manual
 
 ## Introduction
 
-The Phosphorus Agent System is an AI agent workflow built using the Multi Agent Framework CREW.AI. It allows you to create and manage agents with specific roles to complete tasks assigned to them. This user manual provides detailed instructions on how to install and use the Phosphorus Agent System.
+The Phosphorus Interface is a user-friendly interface for managing agent workflows. It allows users to start and stop workflows, add and remove tasks, and monitor the status of the workflow. This user manual provides detailed instructions on how to install the necessary dependencies and how to use the Phosphorus Interface.
 
-## Table of Contents
+## Installation
 
-1. [Installation](#installation)
-2. [Usage](#usage)
-   - [Creating Agents](#creating-agents)
-   - [Assigning Tasks](#assigning-tasks)
-   - [Running the Workflow](#running-the-workflow)
-3. [Conclusion](#conclusion)
+To install the Phosphorus Interface, follow these steps:
 
-## Installation <a name="installation"></a>
+1. Make sure you have Python installed on your local machine.
 
-To install the Phosphorus Agent System, follow these steps:
+2. Clone the repository containing the Phosphorus Interface code.
 
-1. Make sure you have Python installed on your system. You can download Python from the official website: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+3. Navigate to the project directory.
 
-2. Clone the Phosphorus Agent System repository from GitHub:
-
-   ```
-   git clone https://github.com/your-username/phosphorus-agent-system.git
-   ```
-
-3. Navigate to the cloned repository:
-
-   ```
-   cd phosphorus-agent-system
-   ```
-
-4. Install the required dependencies using pip:
+4. Install the required dependencies by running the following command:
 
    ```
    pip install -r requirements.txt
    ```
 
-5. You have successfully installed the Phosphorus Agent System.
+## Usage
 
-## Usage <a name="usage"></a>
+To use the Phosphorus Interface, follow these steps:
 
-### Creating Agents <a name="creating-agents"></a>
+1. Open a terminal or command prompt.
 
-To create a new agent, you can use the `create_agent` function in the `main.py` file. This function takes two parameters: `agent_name` and `agent_role`. Here's an example:
+2. Navigate to the project directory.
 
-```python
-agent1 = create_agent("Agent1", "Role1")
-```
+3. Run the following command to start the interface:
 
-This will create a new agent with the name "Agent1" and the role "Role1". You can create as many agents as you need.
+   ```
+   python main.py
+   ```
 
-### Assigning Tasks <a name="assigning-tasks"></a>
+4. The Phosphorus Interface window will open.
 
-To assign a task to an agent, you can use the `assign_task` function in the `main.py` file. This function takes two parameters: `agent` and `task`. Here's an example:
+5. Use the interface buttons to perform the following actions:
 
-```python
-assign_task(agent1, "Task1")
-```
+   - Start Workflow: Click this button to start the workflow. If the workflow is already running, a message will be displayed indicating that the workflow is already running.
 
-This will assign the task "Task1" to the agent `agent1`. You can assign tasks to multiple agents.
+   - Stop Workflow: Click this button to stop the workflow. If the workflow is not running, a message will be displayed indicating that the workflow is not running.
 
-### Running the Workflow <a name="running-the-workflow"></a>
+   - Add Task: Click this button to add a task to the workflow. A dialog box will appear asking you to enter the task name. Enter the task name and click "OK" to add the task to the workflow.
 
-To run the workflow and execute the tasks assigned to the agents, you can use the `run` method of the `Workflow` class in the `main.py` file. Here's an example:
+   - Remove Task: Click this button to remove a task from the workflow. A dialog box will appear asking you to enter the task name. Enter the task name and click "OK" to remove the task from the workflow.
 
-```python
-workflow.run()
-```
+6. Close the Phosphorus Interface window when you are done using it.
 
-This will run the workflow and display the execution status of each agent and their assigned tasks.
+## Conclusion
 
-## Conclusion <a name="conclusion"></a>
-
-Congratulations! You have successfully installed and learned how to use the Phosphorus Agent System. You can now create agents, assign tasks, and run the workflow to manage your AI agent system. If you have any further questions or need assistance, please refer to the documentation or contact our support team.
-
-Happy agent managing!
+Congratulations! You have successfully installed and used the Phosphorus Interface. You can now easily manage agent workflows using the user-friendly interface. If you have any further questions or need assistance, please refer to the documentation or contact our support team.

@@ -1,35 +1,36 @@
 '''
-Main file for the Phosphorus agent system.
+This is the main file for the Phosphorus interface.
 '''
-from crewai import Agent, Workflow
-def create_agent(agent_name, agent_role):
-    '''
-    Function to create a new agent with the given name and role.
-    '''
-    agent = Agent(agent_name)
-    agent.set_role(agent_role)
-    return agent
-def assign_task(agent, task):
-    '''
-    Function to assign a task to an agent.
-    '''
-    agent.assign_task(task)
-def main():
-    '''
-    Main function to run the Phosphorus agent system.
-    '''
-    # Create a workflow
-    workflow = Workflow()
-    # Create agents
-    agent1 = create_agent("Agent1", "Coding")
-    agent2 = create_agent("Agent2", "Running Code and Debugging")
-    # Assign tasks to agents
-    assign_task(agent1, "Code the interface for the Phosphorus App")
-    assign_task(agent2, "Assist Agent 1 in Coding but especially Running And Debbuging, reflecting on all issues you stumble upon togheder")
-    # Add agents to the workflow
-    workflow.add_agent(agent1)
-    workflow.add_agent(agent2)
-    # Run the workflow
-    workflow.run()
+import tkinter as tk
+from tkinter import simpledialog
+from workflow import Workflow
+class PhosphorusInterface(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title("Phosphorus Interface")
+        self.geometry("800x600")
+        self.workflow = Workflow()
+        self.create_widgets()
+    def create_widgets(self):
+        # Create interface elements here
+        start_button = tk.Button(self, text="Start Workflow", command=self.workflow.start_workflow)
+        start_button.pack()
+        stop_button = tk.Button(self, text="Stop Workflow", command=self.workflow.stop_workflow)
+        stop_button.pack()
+        add_task_button = tk.Button(self, text="Add Task", command=self.add_task)
+        add_task_button.pack()
+        remove_task_button = tk.Button(self, text="Remove Task", command=self.remove_task)
+        remove_task_button.pack()
+    def add_task(self):
+        # Add a task to the workflow
+        task = simpledialog.askstring("Add Task", "Enter task name:")
+        if task:
+            self.workflow.add_task(task)
+    def remove_task(self):
+        # Remove a task from the workflow
+        task = simpledialog.askstring("Remove Task", "Enter task name:")
+        if task:
+            self.workflow.remove_task(task)
 if __name__ == "__main__":
-    main()
+    app = PhosphorusInterface()
+    app.mainloop()

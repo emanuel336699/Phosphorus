@@ -1,5 +1,5 @@
 Task:
-[Create an AI AGENT WORKFLOW wich will be made using the Multi Agent Framework CREW.AI, this AI AGENT WORKFLOW will be consistent of Agents wich can create new agents and assign them with specific roles for completing the tasks they will be required to complete, The Agent system will be called Phosphor us, this whole thing needs to be able to run locally and for free, i shall implement Large Language Models wich are open source and use them for different agents, make sure you leave precise instructions for running it afterwars]
+create the interface for Phosphorus and run it on a local server, then add instructions as to how to access the agent workflow interface
 
 Config:
 ChatEnvConfig.with_memory: False
@@ -14,7 +14,7 @@ Roster:
 Chief Executive Officer, Counselor, Chief Human Resource Officer, Chief Product Officer, Chief Technology Officer, Programmer, Code Reviewer, Software Test Engineer, Chief Creative Officer
 
 Modality:
-application
+website
 
 Ideas:
 
@@ -23,7 +23,7 @@ Language:
  Python
 
 Code_Version:
-4.0
+6.0
 
 Proposed_images:
 0
