@@ -5,17 +5,15 @@ from textwrap import dedent
 
 class AIAgentCreatorExecutorTasks():
     def create_workflow_task(self, agent, workflow_goal, task_description):
-        task_description_dedent = dedent(f"""
-            Goal: {workflow_goal}
-            Steps: {task_description}
-        """)
-        
+        task = Task(
+            f"Goal: {workflow_goal}. Steps: {task_description}",
+            agent=agent  # Assign the agent to the task
+        )        
         expected_output = "Successful integration and functionality of the AI within the app."
 
         task = Task(
             agent=agent, 
-            description=task_description_dedent,
-            expected_output=expected_output
+            description=task_description,            expected_output=expected_output
         )
 
         return task
